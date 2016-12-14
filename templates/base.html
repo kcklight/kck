@@ -9,7 +9,6 @@
         <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     </head>
     <body>
-        <div class="container" role="navigation">
             <nav class="navbar navbar-default">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,13 +26,12 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="">Products</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                     </div>
                 </div>
             </nav>
-        </div>
         {% block content %}{% endblock %}
         <footer class="footer">
             <div class="container">
@@ -42,7 +40,7 @@
             </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>');</script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
