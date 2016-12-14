@@ -10,8 +10,8 @@
 </div>
 
 <div class="container">
+    <hr class="featurette-divider">
     <div class="row">
-        <hr>
         <div class="col-sm-5">
             <blockquote>
                 <h3>How to save energy, save money and save the environment?</h3>
@@ -21,12 +21,84 @@
             <p>The longevity of LED lighting equipment is typically much greater than
             incandescent or fluorescent lighting equipment. For example, a traditional
             incandescent light bulb would require about <strong>7~8 times more energy</strong> 
-            than a LED bulb.</p><br>
-            <p>One of the most direct benefit from using LED equipment is that the energy bill 
+            than a LED bulb.
+            One of the most direct benefit from using LED equipment is that the energy bill 
             would reduce significantly. Also, as LED equipment have much longer service life
-            than all the other lighting equipment, you can also save money from replacing them.</p><br>
-            <p>LED lighting equipment do not contain any toxic elements so </p>
+            than all the other lighting equipment, you can also save money from replacing them.
+            There aren't any toxic elements in the LED lights so they are also
+            easy to be recycled or disposed without negative impact to the environment.</p>
         </div>
     </div>
 </div>
+<div class="container">
+    <hr class="featurette-divider">
+    <div class="row">
+        <div class="container col-sm-4">
+            <h4>Serivce life (hours) comparison</h4>
+            <div class="ct-chart ct-golden-section" id="chart1"></div>
+            <h5>Higher is better</h5>
+        </div>
+         <div class="container col-sm-4">
+             <h4>Energy consumption (Wattage) comparison</h4>
+            <div class="ct-chart ct-golden-section" id="chart2"></div>
+            <h5>Lower is better</h5>
+        </div>
+         <div class="container col-sm-4">
+             <h4>Heat emission (btu's/hour) comparison</h4>
+            <div class="ct-chart ct-golden-section" id="chart3"></div>
+            <h5>Lower is better</h5>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Chartist.Bar('#chart1', {
+        labels: ['LED', 'Fluorescent', 'Incandescent'],
+        series: [[30, 8.5, 1]]
+    });
+    
+    new Chartist.Bar('#chart2', {
+        labels: ['LED', 'Fluorescent', 'Incandescent'],
+        series: [[0.13, 0.25, 1]]
+    });
+    
+    new Chartist.Bar('#chart3', {
+        labels: ['LED', 'Fluorescent', 'Incandescent'],
+        series: [[0.04, 0.36, 1]]
+    });
+    
+    /*var data = {
+      labels: ['Service Life', 'Equivalent Wattage', 'Heat Emission'],
+        series: [
+        [30, 8.5, 1],
+        [0.13, 0.25, 1],
+        [0.04, 0.36, 1]
+      ]
+    };
+    
+    var options = {
+      seriesBarDistance: 15
+    };
+    
+    var responsiveOptions = [
+      ['screen and (min-width: 641px) and (max-width: 1024px)', {
+        seriesBarDistance: 3,
+        axisX: {
+          labelInterpolationFnc: function (value) {
+            return value;
+          }
+        }
+      }],
+      ['screen and (max-width: 640px)', {
+        seriesBarDistance: 5,
+        axisX: {
+          labelInterpolationFnc: function (value) {
+            return value[0];
+          }
+        }
+      }]
+    ];
+    
+    new Chartist.Bar('#chart1', data, options, responsiveOptions);*/
+</script>
 {% endblock %}
